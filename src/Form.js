@@ -30,13 +30,13 @@ render() {
 
        return (
            <form onSubmit={this.onFormSubmit}>
-               <label>Name</label>
+               <label>City</label>
                <input
                    type="text"
                    name="name"
                    value={name}
                    onChange={this.handleChange} />
-               <label>Job</label>
+               <label>Country</label>
                <input
                    type="text"
                    name="job"

@@ -3,8 +3,8 @@ const TableHeader = () => {
     return (
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Job</th>
+                <th>City</th>
+                <th>Country</th>
             </tr>
         </thead>
     );
