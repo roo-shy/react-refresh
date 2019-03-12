@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Table from './Table';
 import Form from './Form';
+import Board from './Board';
 
 class App extends Component {
   state = {
