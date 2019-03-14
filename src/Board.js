@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class Board extends component.React {
+class Board extends Component {
   render() {
     return (
       <button className="square">
