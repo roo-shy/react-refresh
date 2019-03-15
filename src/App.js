@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Table from './Table';
 import Form from './Form';
 import Board from './Board';
+import {BrowserRouter, Route} from 'react-router-dom';
 
 class App extends Component {
   state = {
@@ -28,6 +29,25 @@ class App extends Component {
 
       return (
           <div className="container">
+            <BrowserRouter>
+            <div>
+              <Route exact={true} path='/' render={() => (
+                <div className="App">
+                  {/* <Home /> */}
+                </div>
+              )}/>
+              <Route exact={true} path='/signin' render={() => (
+                <div className="App">
+                  {/* <SignIn /> */}
+                </div>
+              )}/>
+              <Route exact={true} path='/signup' render={() => (
+                <div className="App">
+                  {/* <SignUp /> */}
+                </div>
+              )}/>
+            </div>
+          </BrowserRouter>
               <Table
                   characterData={characters}
                   removeCharacter={this.removeCharacter}
