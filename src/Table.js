@@ -3,8 +3,11 @@ const TableHeader = () => {
     return (
         <thead>
             <tr>
-                <th>City</th>
-                <th>Country</th>
+                <th>First</th>
+                <th>Last</th>
+                <th>Company</th>
+                <th>Email</th>
+                <th>Phone</th>
             </tr>
         </thead>
     );
