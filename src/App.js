@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Table from './Table';
 import Form from './Form';
 import Board from './Board';
+import Square from './Square';
 import {BrowserRouter, Route} from 'react-router-dom';
 
 class App extends Component {
