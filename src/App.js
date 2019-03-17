@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 import Table from './Table';
 import Form from './Form';
-import Board from './Board';
-import Square from './Square';
-import {BrowserRouter, Route} from 'react-router-dom';
+// import Square from './Square';
+// import {BrowserRouter, Route} from 'react-router-dom';
 
 class App extends Component {
   state = {
@@ -27,34 +26,51 @@ class App extends Component {
 
   render() {
       const { characters } = this.state;
+      const status = 'Next player: X';
 
       return (
           <div className="container">
-            <BrowserRouter>
+            {/* <BrowserRouter>
             <div>
               <Route exact={true} path='/' render={() => (
-                <div className="App">
+                <div className="App"> */}
                   {/* <Home /> */}
-                </div>
+                {/* </div>
               )}/>
               <Route exact={true} path='/signin' render={() => (
-                <div className="App">
+                <div className="App"> */}
                   {/* <SignIn /> */}
-                </div>
+                {/* </div>
               )}/>
               <Route exact={true} path='/signup' render={() => (
-                <div className="App">
+                <div className="App"> */}
                   {/* <SignUp /> */}
-                </div>
-              )}/>
-            </div>
-          </BrowserRouter>
+                {/* </div> */}
+              {/* )}/> */}
+            {/* </div> */}
+           {/* </BrowserRouter> */}
               <Table
                   characterData={characters}
                   removeCharacter={this.removeCharacter}
               />
               <Form handleSubmit={this.handleSubmit} />
-          </div>
+            <div className="status">{status}</div>
+            <div className="board-row">
+              {this.renderSquare(0)}
+              {this.renderSquare(1)}
+              {this.renderSquare(2)}
+            </div>
+            <div className="board-row">
+              {this.renderSquare(3)}
+              {this.renderSquare(4)}
+              {this.renderSquare(5)}
+            </div>
+            <div className="board-row">
+              {this.renderSquare(6)}
+              {this.renderSquare(7)}
+              {this.renderSquare(8)}
+            </div>
+        </div>
       );
    }
 }
